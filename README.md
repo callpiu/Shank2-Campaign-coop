@@ -26,7 +26,7 @@ Download one package from [the v0.10.3 release](https://github.com/callpiu/Shank
 1. Install the Steam version of Shank 2 and exit the game.
 2. Extract one complete package, keeping its `patch` folder next to the installer.
 3. Run `Install.cmd` (or `安装.cmd` in the Chinese packages), choose the game folder containing `bin` and `data-pc`, and select Install. The manager also offers verification and removal.
-4. Start the game normally through Steam and choose **Campaign Mode → Local Co-op**.
+4. Start the game normally through Steam. With either co-op package, choose **Campaign Mode → Local Co-op**.
 
 To switch package types, uninstall the installed package first. Keep the `.shank2-patch` backup in the game folder. The installer checks the original executable and reconstructs the modified version from your own game; it does not include the full game executable or Steam DLLs. Windows PowerShell 5.1 is required.
 
@@ -70,7 +70,7 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 1. 安装 Steam 版 Shank 2，退出游戏。
 2. 完整解压一个发行包，保持 `patch` 文件夹与安装脚本在一起。
 3. 运行 `安装.cmd`，选择包含 `bin` 和 `data-pc` 的游戏目录，在管理器中选择安装；管理器也提供校验和卸载。
-4. 从 Steam 正常启动游戏，选择「战役模式 → 本地双人」。
+4. 从 Steam 正常启动游戏；安装双人 MOD 或整合包后，选择「战役模式 → 本地双人」。
 
 切换不同类型的包前，请先卸载当前包。保留游戏目录下的 `.shank2-patch` 备份。安装器会校验并基于用户自己的游戏文件重建程序，不包含完整游戏 EXE 或 Steam DLL；需要 Windows PowerShell 5.1。
 
