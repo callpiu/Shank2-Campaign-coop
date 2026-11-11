@@ -4,13 +4,13 @@ Play the campaign locally with two players on the same screen. The mod adds a **
 
 ## Downloads
 
-Choose a [v0.10.4 MOD package](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.4), with or without Chinese localization. The [localization-only package](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) remains on v0.10.3.
+Download one package from the [unified latest release](https://github.com/callpiu/Shank2-Campaign-coop/releases/latest). The three packages retain their own version numbers.
 
 | Package | Contents |
 | --- | --- |
 | `Shank2-v0.10.4-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
 | `Shank2-v0.10.3-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod |
-| `Shank2-v0.10.4-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization |
+| `Shank2-v0.10.5-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization; includes the checkpoint retry fix |
 
 ## Features
 
@@ -65,13 +65,13 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 ## 下载
 
-从 [v0.10.4 发布页](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.4) 下载原版 MOD 或汉化整合包；[纯汉化包](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) 仍为 v0.10.3。
+从[统一下载页](https://github.com/callpiu/Shank2-Campaign-coop/releases/latest)选择一个包下载。三个包各自保留原来的版本号。
 
 | 文件 | 内容 |
 | --- | --- |
 | `Shank2-v0.10.4-MOD.zip` | 原版战役双人 MOD，不含汉化 |
 | `Shank2-v0.10.3-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD |
-| `Shank2-v0.10.4-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包 |
+| `Shank2-v0.10.5-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包，已修复汉化下的检查点重试 |
 
 ## 功能
 
