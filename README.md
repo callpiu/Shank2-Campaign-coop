@@ -38,6 +38,19 @@ Run `Coop-Key-Settings.cmd` in the game folder to change bindings; restart the g
 
 The [source directory](source/) contains the shipped English MOD installer, patch recipe and UI resources, plus the gameplay, interface, tools and packaging scripts used throughout development. See [source/README.md](source/README.md) for the layout and build limitations.
 
+## Building from source
+
+The repository preserves the development scripts, but it is **not yet a self-contained, one-command build**. A full rebuild requires a supported Steam copy of Shank 2, Windows, Python, PowerShell, the dependencies used by the relevant scripts, and historical intermediate files or archives that are not included in this repository. Some scripts also contain paths from the original development machine; inspect and adjust them before use.
+
+To investigate or continue development:
+
+1. Start with [the source notes](source/README.md) and review the scripts and their input paths. Work on a separate copy of the game and preserve your saves.
+2. The historical [v27 traits builder](source/history/story-coop-v27-traits/build_traits.py), [v28 selection UI builder](source/history/story-coop-v28-trait-descriptions/build_descriptions.py), [v33 dodge builder](source/history/story-coop-v33-dodge/build_dodge.py), and [v34 release builder](source/history/story-coop-v34-release/build_release.py) show the main stages. The v35–v37 directories contain subsequent English layout, controls and packaging changes.
+3. The [v0.10.3 release patch](source/release-v0.10.3-mod/patch/) contains the shipped English installer, recipe and UI data. The installer reconstructs the executable from a verified original; the repository does not contain the complete game executable or the historical inputs needed to reproduce every release archive.
+4. Review diagnostic and test scripts before running them: some attach to or modify a running process. Temporary gameplay test assists are separate from the shipped MOD.
+
+For a working installation without rebuilding, use the [release packages](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) and follow the installation steps above.
+
 ## Notes
 
 The original Steam executable supported by the installer has SHA-256 `3cd7aeb0d9f135dc82c4bba491463ecb85fec9aa33b9189ab2cee5160dd045d3`. Many features have been tested in play, but complete campaign and character coverage is not yet verified. Steam integration is retained; achievements are not bypassed.
@@ -85,6 +98,19 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 ## 源码
 
 [源码目录](source/)包含英文 MOD 发行版的安装器、补丁配方和界面资源，以及开发过程中使用的玩法、界面、工具和打包脚本。目录结构和构建限制见 [源码说明](source/README.md)。
+
+## 从源码构建
+
+仓库保留了开发脚本，但**目前还不是可一键构建的完整工程**。完整重建需要受支持的 Steam 版 Shank 2、Windows、Python、PowerShell、相关脚本所需的依赖，以及仓库中未包含的历史中间文件或压缩包。部分脚本还写有原开发机器的路径，使用前需要检查并调整。
+
+如需研究或继续开发：
+
+1. 先阅读[源码说明](source/README.md)，检查脚本及其输入路径；请在独立的游戏副本上操作并保留存档。
+2. 主要阶段可参考 [v27 属性构建脚本](source/history/story-coop-v27-traits/build_traits.py)、[v28 选人界面脚本](source/history/story-coop-v28-trait-descriptions/build_descriptions.py)、[v33 闪避脚本](source/history/story-coop-v33-dodge/build_dodge.py)和 [v34 发行构建脚本](source/history/story-coop-v34-release/build_release.py)。v35 至 v37 目录包含后续英文布局、键位入口和打包修改。
+3. [v0.10.3 发行版补丁目录](source/release-v0.10.3-mod/patch/)包含实际发布的英文安装器、补丁配方和界面数据。安装器基于校验过的原版程序重建 EXE；仓库不包含完整游戏程序，也不包含复现每个发行包所需的全部历史输入。
+4. 运行诊断和测试脚本前请先阅读：部分脚本会连接或修改运行中的进程。临时玩法测试辅助与正式 MOD 分开。
+
+如果只需要安装可用版本，无需自行构建，可按上方步骤使用[发行包](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3)。
 
 ## 说明
 
