@@ -34,6 +34,10 @@ To switch package types, uninstall the installed package first. Keep the `.shank
 
 Run `Coop-Key-Settings.cmd` in the game folder to change bindings; restart the game to apply changes. The default shared-keyboard layout uses WASD / arrow keys to move, Space / Numpad 0 to jump, J / Numpad 1 for light attack, K / Numpad 2 for heavy weapon, L / Numpad 3 for ranged attack, O / Numpad 6 for grapple, and Z / C or Numpad 8 / 9 to dodge left / right. Enable NumLock for player 2. Enter pauses or resumes.
 
+## Source code
+
+The [source directory](source/) contains the shipped English MOD installer, patch recipe and UI resources, plus the gameplay, interface, tools and packaging scripts used throughout development. See [source/README.md](source/README.md) for the layout and build limitations.
+
 ## Notes
 
 The original Steam executable supported by the installer has SHA-256 `3cd7aeb0d9f135dc82c4bba491463ecb85fec9aa33b9189ab2cee5160dd045d3`. Many features have been tested in play, but complete campaign and character coverage is not yet verified. Steam integration is retained; achievements are not bypassed.
@@ -77,6 +81,10 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 ## 按键
 
 运行游戏目录中的 `Coop-Key-Settings.cmd` 可修改键位，重启游戏后生效。默认共用键盘：1P 使用 WASD 移动，2P 使用方向键；跳跃分别为空格和小键盘 0，轻攻击为 J 和小键盘 1，重武器为 K 和小键盘 2，远程攻击为 L 和小键盘 3，抓取为 O 和小键盘 6，左右闪避为 Z／C 和小键盘 8／9。2P 请开启 NumLock。回车暂停或恢复。
+
+## 源码
+
+[源码目录](source/)包含英文 MOD 发行版的安装器、补丁配方和界面资源，以及开发过程中使用的玩法、界面、工具和打包脚本。目录结构和构建限制见 [源码说明](source/README.md)。
 
 ## 说明
 

@@ -1,0 +1,19 @@
+{
+  "version": "0.10.3",
+  "english_only": true,
+  "layout_visual_pending": false,
+  "user_confirmed_characters": [
+    "Classic",
+    "Boogie",
+    "Sunshine"
+  ],
+  "native_mod_exe_unchanged": true,
+  "test_assists": false,
+  "controls_shortcut_direct": true,
+  "actual_installed_controls_cmd_verified": true,
+  "missing_helper_failure_reproduced": true,
+  "simplified_entries": true,
+  "game_payload_unchanged": true,
+  "public_entries_verified": true,
+  "version_only_upgrade_receipt_verified": true
+}

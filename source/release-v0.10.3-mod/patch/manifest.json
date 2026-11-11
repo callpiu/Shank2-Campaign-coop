@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "version": "0.10.3",
+  "profile": "MOD-EN",
+  "display_name": "Story Co-op MOD (English)",
+  "includes_mod": true,
+  "includes_localization": false,
+  "original_exe_sha256": "3cd7aeb0d9f135dc82c4bba491463ecb85fec9aa33b9189ab2cee5160dd045d3",
+  "guards": {
+    "bin/steam_api.dll": "fa91d03d2a73939b6354c7eaf8062eb1dcdfd1b826cb1db35dfbaffebb65e9b9",
+    "bin/binkw32.dll": "2d2beb4f5b38f9bda358543e1fd437af45a95d37066f926a1e0f105d304f419b",
+    "data-pc/ui/campaignscreen.chui": "64a2657cf5aa21314616ddec19388ea08f5ce11a5ce0ef4835eab693204856a7"
+  },
+  "files": [
+    {
+      "path": "data-pc/ui/cooppreselv28en.chui",
+      "targetRelative": "data-pc/ui/cooppreselv28en.chui",
+      "relative": "payload/data-pc/ui/cooppreselv28en.chui",
+      "size": 8241,
+      "sha256": "165b6f6de674aed9acba764ca59a20b3da4b24cdad18f6a2025aac21e3e4839d",
+      "original_sha256": null
+    },
+    {
+      "path": "data-pc/ui/coopsolo28selen.chui",
+      "targetRelative": "data-pc/ui/coopsolo28selen.chui",
+      "relative": "payload/data-pc/ui/coopsolo28selen.chui",
+      "size": 8166,
+      "sha256": "a1d85878f24e97bb1fff86cc50f091ebc9533275c3727417dd20a20942edb741",
+      "original_sha256": null
+    },
+    {
+      "path": "data-pc/ui/campaigncoopv20en.chui",
+      "targetRelative": "data-pc/ui/campaigncoopv20en.chui",
+      "relative": "payload/data-pc/ui/campaigncoopv20en.chui",
+      "size": 17164,
+      "sha256": "03b5c6b5517c1676b2323729aa7bd22ac858ce8b7eefef2d4f745bcfb8cd45fc",
+      "original_sha256": null
+    },
+    {
+      "path": "data-pc/ui/coopsolo26huden.chui",
+      "targetRelative": "data-pc/ui/coopsolo26huden.chui",
+      "relative": "payload/data-pc/ui/coopsolo26huden.chui",
+      "size": 12441,
+      "sha256": "e0cf402d249ba0347f33ac1965b382a5bbb85a646821a6f24111ae841de660de",
+      "original_sha256": null
+    },
+    {
+      "path": "data-pc/ui/pausecoopv05.chui",
+      "targetRelative": "data-pc/ui/pausecoopv05.chui",
+      "relative": "payload/data-pc/ui/pausecoopv05.chui",
+      "size": 1466,
+      "sha256": "cc4b13ec29dc09988fbfeae426fc7796337db3133ef9ebb206387bcd80d398c3",
+      "original_sha256": null
+    },
+    {
+      "path": "data-pc/ui/equipcoopv05.chui",
+      "targetRelative": "data-pc/ui/equipcoopv05.chui",
+      "relative": "payload/data-pc/ui/equipcoopv05.chui",
+      "size": 8027,
+      "sha256": "4049a46ad51f094b7c28dcbcdbca837e81e663afce0c6ed43efc9e04f4322f15",
+      "original_sha256": null
+    },
+    {
+      "path": "patch/Coop-Key-Settings.ps1",
+      "targetRelative": "patch/Coop-Key-Settings.ps1",
+      "relative": "payload/patch/Coop-Key-Settings.ps1",
+      "size": 14874,
+      "sha256": "617e3997f607bfed93ae3bf4199aa82357ba51328f5bfede66844e1c49cc589d",
+      "original_sha256": null
+    },
+    {
+      "path": "Coop-Key-Settings.cmd",
+      "targetRelative": "Coop-Key-Settings.cmd",
+      "relative": "payload/Coop-Key-Settings.cmd",
+      "size": 243,
+      "sha256": "0a594a1a1c6c706572a8658db1253d747237d54e8e890aeb2adbb0c9bdf24fc4",
+      "original_sha256": null
+    },
+    {
+      "path": "bin/shank2.exe",
+      "targetRelative": "bin/shank2.exe",
+      "recipe": "exe-recipe.json",
+      "size": 4199424,
+      "sha256": "67bd4a86a1c1f6ba410b1c2ce8368888804408dc13ab0543db7484de3b900356",
+      "original_sha256": "3cd7aeb0d9f135dc82c4bba491463ecb85fec9aa33b9189ab2cee5160dd045d3"
+    },
+    {
+      "path": "bin/shank2-story-coop.exe",
+      "targetRelative": "bin/shank2-story-coop.exe",
+      "recipe": "exe-recipe.json",
+      "size": 4199424,
+      "sha256": "67bd4a86a1c1f6ba410b1c2ce8368888804408dc13ab0543db7484de3b900356",
+      "original_sha256": null
+    }
+  ]
+}
