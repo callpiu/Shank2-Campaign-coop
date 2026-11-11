@@ -1,3 +1,4 @@
 # Release inputs are hashed as bytes, including PowerShell BOMs and CMD CRLF.
 /source/release-v0.10.3-mod/patch/** -text
 /source/package-inputs/MOD/** -text
+/source/release-v0.10.4-mod/patch/** -text

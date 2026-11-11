@@ -4,13 +4,13 @@ Play the campaign locally with two players on the same screen. The mod adds a **
 
 ## Downloads
 
-Download one package from [the v0.10.3 release](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3):
+Choose a [v0.10.4 MOD package](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.4), with or without Chinese localization. The [localization-only package](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) remains on v0.10.3.
 
 | Package | Contents |
 | --- | --- |
-| `Shank2-v0.10.3-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
+| `Shank2-v0.10.4-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
 | `Shank2-v0.10.3-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod |
-| `Shank2-v0.10.3-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization |
+| `Shank2-v0.10.4-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization |
 
 ## Features
 
@@ -18,6 +18,7 @@ Download one package from [the v0.10.3 release](https://github.com/callpiu/Shank
 - Choose characters and unlocked weapons for both players before campaign levels; change equipment from the pause menu.
 - All 17 characters available, with applicable Survival health and damage traits shown on the selection screen.
 - Revive either player; retry when both are down. Scores are retained on retry, and terrain deaths bring the downed player near their teammate.
+- In v0.10.4, choose **Restart Checkpoint** from the pause menu, or confirm a different character to restart the checkpoint and apply the change immediately. Throwables refill on retry and when starting a new level.
 - Shared camera with smooth zoom; F6 recalls player 2 and F7 toggles the shared camera.
 - The Chinese packages include localized cutscenes with enhanced dialogue and reduced background music.
 
@@ -46,9 +47,9 @@ From the repository root, run this with Python 3.12 and a supported, unmodified 
 py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
 ```
 
-The build verifies the Steam files, reconstructs the patched executable in memory and checks its SHA-256. It writes the release directory and `Shank2-v0.10.3-MOD.zip` to `dist/`, without changing the game directory. Use `--out` to choose a new output directory for subsequent builds. No previous release ZIP or extra Python packages are required.
+The build verifies the Steam files, reconstructs the patched executable in memory and checks its SHA-256. It writes the release directory and `Shank2-v0.10.4-MOD.zip` to `dist/`, without changing the game directory. Use `--out` to choose a new output directory for subsequent builds. No previous release ZIP or extra Python packages are required.
 
-To package the committed inputs without verifying a game copy, run `py -3.12 build.py --package-only`. With the same Python and zlib versions, repeat builds produce identical ZIP bytes. The existing release ZIP used different ZIP metadata, so its archive hash differs. See [source/README.md](source/README.md) for the build inputs and scope.
+To package the committed inputs without verifying a game copy, run `py -3.12 build.py --package-only`. With the same Python and zlib versions, repeat builds produce identical ZIP bytes. See [source/README.md](source/README.md) for the build inputs and scope.
 
 ## Notes
 
@@ -64,20 +65,21 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 ## 下载
 
-从 [v0.10.3 发布页](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) 选择一个包：
+从 [v0.10.4 发布页](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.4) 下载原版 MOD 或汉化整合包；[纯汉化包](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) 仍为 v0.10.3。
 
 | 文件 | 内容 |
 | --- | --- |
-| `Shank2-v0.10.3-MOD.zip` | 原版战役双人 MOD，不含汉化 |
+| `Shank2-v0.10.4-MOD.zip` | 原版战役双人 MOD，不含汉化 |
 | `Shank2-v0.10.3-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD |
-| `Shank2-v0.10.3-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包 |
+| `Shank2-v0.10.4-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包 |
 
 ## 功能
 
 - 两人拥有独立操作、血量、装备、消耗品和分数。
 - 每关开始前分别选择角色及已解锁武器，关卡中可从暂停菜单更换装备。
 - 开放 17 名角色，并在选人界面显示适用的生存模式生命和伤害属性。
-- 双方均可救援队友，双方倒地后才进入重试；重试保留分数，地形击倒会将角色送回队友附近。
+- 双方均可救援队友，双方倒地后进入重试；重试保留分数，地形击倒会将角色送回队友附近。
+- v0.10.4 可从暂停菜单选择 **Restart Checkpoint（从检查点重试）**。确认换成不同角色也会自动重试当前检查点，让新角色立即生效。重试和进入新关卡时会补满投掷物。
 - 双人镜头平滑缩放；F6 召回 2P，F7 切换双人镜头。
 - 汉化包包含中文字幕过场，对白经过增强，背景音乐经过压低。
 
@@ -106,9 +108,9 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
 ```
 
-构建脚本会校验 Steam 文件，在内存中重建补丁程序并核对 SHA-256，再将发行目录和 `Shank2-v0.10.3-MOD.zip` 写入 `dist/`，不会修改游戏目录。重复构建时可用 `--out` 指定新的输出目录。无需旧版 ZIP 或额外的 Python 包。
+构建脚本会校验 Steam 文件，在内存中重建补丁程序并核对 SHA-256，再将发行目录和 `Shank2-v0.10.4-MOD.zip` 写入 `dist/`，不会修改游戏目录。重复构建时可用 `--out` 指定新的输出目录。无需旧版 ZIP 或额外的 Python 包。
 
-只打包、不核对原版游戏时，可执行 `py -3.12 build.py --package-only`。使用相同的 Python 和 zlib 版本，重复构建的 ZIP 字节一致。已发布的旧 ZIP 使用不同的归档元数据，压缩包哈希因此不同。构建输入和范围见[源码说明](source/README.md)。
+只打包、不核对原版游戏时，可执行 `py -3.12 build.py --package-only`。使用相同的 Python 和 zlib 版本，重复构建的 ZIP 字节一致。构建输入和范围见[源码说明](source/README.md)。
 
 ## 说明
 

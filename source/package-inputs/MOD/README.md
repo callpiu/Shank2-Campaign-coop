@@ -1,4 +1,4 @@
-# Shank 2 Campaign Co-op MOD v0.10.3
+# Shank 2 Campaign Co-op MOD v0.10.4
 
 This package has two shortcuts:
 
@@ -17,6 +17,8 @@ settings apply the next time the game starts. All package filenames and text are
 English. Technical scripts, manifests and checksums are inside patch.
 
 ## Co-op features
+
+- Use Restart Checkpoint in the pause menu. Confirming a different character automatically retries the current checkpoint. Throwables refill on retry and when starting a new level.
 
 - Independent controls, health, equipment, consumables and scores.
 - Both players choose character and equipment before each campaign level.

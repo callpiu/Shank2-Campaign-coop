@@ -1,0 +1,12 @@
+{
+  "version": "0.10.4",
+  "gameplay_user_confirmed": [
+    "manual checkpoint retry",
+    "checkpoint retry on character change",
+    "throwable refill"
+  ],
+  "offline": [
+    "x86 checkpoint and throwable fixtures",
+    "install, verify and rollback"
+  ]
+}

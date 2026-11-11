@@ -12,7 +12,7 @@ import zlib
 
 
 ROOT = Path(__file__).resolve().parent
-PATCH = ROOT / "source/release-v0.10.3-mod/patch"
+PATCH = ROOT / "source/release-v0.10.4-mod/patch"
 WRAPPERS = ROOT / "source/package-inputs/MOD"
 META = ("Coop-Key-Settings.ps1", "Game-Paths.ps1", "Install-Patch.ps1",
         "PatchManager.ps1", "exe-recipe.json", "manifest.json", "VALIDATION.json")
