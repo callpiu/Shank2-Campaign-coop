@@ -8,7 +8,7 @@ Download one package from [the v0.10.3 release](https://github.com/callpiu/Shank
 
 | Package | Contents |
 | --- | --- |
-| `Shank2-v0.10.3-MOD.zip` | English campaign co-op mod |
+| `Shank2-v0.10.3-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
 | `Shank2-v0.10.3-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod |
 | `Shank2-v0.10.3-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization |
 
@@ -36,9 +36,9 @@ Run `Coop-Key-Settings.cmd` in the game folder to change bindings; restart the g
 
 ## Source code
 
-The [source directory](source/) contains the shipped English MOD installer, patch recipe and UI resources, plus the gameplay, interface, tools and packaging scripts used throughout development. See [source/README.md](source/README.md) for the layout and build limitations.
+The [source directory](source/) contains the shipped installer, patch recipe and UI resources for the original-game MOD, plus the gameplay, interface, tools and packaging scripts used throughout development. See [source/README.md](source/README.md) for the layout and build limitations.
 
-## Build the English MOD
+## Build the MOD for the original game
 
 From the repository root, run this with Python 3.12 and a supported, unmodified Steam installation or copy:
 
@@ -68,7 +68,7 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 | 文件 | 内容 |
 | --- | --- |
-| `Shank2-v0.10.3-MOD.zip` | 纯英文战役双人 MOD |
+| `Shank2-v0.10.3-MOD.zip` | 原版战役双人 MOD，不含汉化 |
 | `Shank2-v0.10.3-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD |
 | `Shank2-v0.10.3-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包 |
 
@@ -96,9 +96,9 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 ## 源码
 
-[源码目录](source/)包含英文 MOD 发行版的安装器、补丁配方和界面资源，以及开发过程中使用的玩法、界面、工具和打包脚本。目录结构和构建限制见 [源码说明](source/README.md)。
+[源码目录](source/)包含原版 MOD 发行包的安装器、补丁配方和界面资源，以及开发过程中使用的玩法、界面、工具和打包脚本。目录结构和构建限制见 [源码说明](source/README.md)。
 
-## 构建英文 MOD
+## 构建原版 MOD
 
 在仓库根目录执行以下命令。需要 Python 3.12 和受支持、未修改的 Steam 游戏目录或副本：
 
