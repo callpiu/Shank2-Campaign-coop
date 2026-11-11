@@ -38,18 +38,17 @@ Run `Coop-Key-Settings.cmd` in the game folder to change bindings; restart the g
 
 The [source directory](source/) contains the shipped English MOD installer, patch recipe and UI resources, plus the gameplay, interface, tools and packaging scripts used throughout development. See [source/README.md](source/README.md) for the layout and build limitations.
 
-## Building from source
+## Build the English MOD
 
-The repository preserves the development scripts, but it is **not yet a self-contained, one-command build**. A full rebuild requires a supported Steam copy of Shank 2, Windows, Python, PowerShell, the dependencies used by the relevant scripts, and historical intermediate files or archives that are not included in this repository. Some scripts also contain paths from the original development machine; inspect and adjust them before use.
+From the repository root, run this with Python 3.12 and a supported, unmodified Steam installation or copy:
 
-To investigate or continue development:
+```powershell
+py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
+```
 
-1. Start with [the source notes](source/README.md) and review the scripts and their input paths. Work on a separate copy of the game and preserve your saves.
-2. The historical [v27 traits builder](source/history/story-coop-v27-traits/build_traits.py), [v28 selection UI builder](source/history/story-coop-v28-trait-descriptions/build_descriptions.py), [v33 dodge builder](source/history/story-coop-v33-dodge/build_dodge.py), and [v34 release builder](source/history/story-coop-v34-release/build_release.py) show the main stages. The v35–v37 directories contain subsequent English layout, controls and packaging changes.
-3. The [v0.10.3 release patch](source/release-v0.10.3-mod/patch/) contains the shipped English installer, recipe and UI data. The installer reconstructs the executable from a verified original; the repository does not contain the complete game executable or the historical inputs needed to reproduce every release archive.
-4. Review diagnostic and test scripts before running them: some attach to or modify a running process. Temporary gameplay test assists are separate from the shipped MOD.
+The build verifies the Steam files, reconstructs the patched executable in memory and checks its SHA-256. It writes the release directory and `Shank2-v0.10.3-MOD.zip` to `dist/`, without changing the game directory. Use `--out` to choose a new output directory for subsequent builds. No previous release ZIP or extra Python packages are required.
 
-For a working installation without rebuilding, use the [release packages](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3) and follow the installation steps above.
+To package the committed inputs without verifying a game copy, run `py -3.12 build.py --package-only`. With the same Python and zlib versions, repeat builds produce identical ZIP bytes. The existing release ZIP used different ZIP metadata, so its archive hash differs. See [source/README.md](source/README.md) for the build inputs and scope.
 
 ## Notes
 
@@ -99,18 +98,17 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 [源码目录](source/)包含英文 MOD 发行版的安装器、补丁配方和界面资源，以及开发过程中使用的玩法、界面、工具和打包脚本。目录结构和构建限制见 [源码说明](source/README.md)。
 
-## 从源码构建
+## 构建英文 MOD
 
-仓库保留了开发脚本，但**目前还不是可一键构建的完整工程**。完整重建需要受支持的 Steam 版 Shank 2、Windows、Python、PowerShell、相关脚本所需的依赖，以及仓库中未包含的历史中间文件或压缩包。部分脚本还写有原开发机器的路径，使用前需要检查并调整。
+在仓库根目录执行以下命令。需要 Python 3.12 和受支持、未修改的 Steam 游戏目录或副本：
 
-如需研究或继续开发：
+```powershell
+py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
+```
 
-1. 先阅读[源码说明](source/README.md)，检查脚本及其输入路径；请在独立的游戏副本上操作并保留存档。
-2. 主要阶段可参考 [v27 属性构建脚本](source/history/story-coop-v27-traits/build_traits.py)、[v28 选人界面脚本](source/history/story-coop-v28-trait-descriptions/build_descriptions.py)、[v33 闪避脚本](source/history/story-coop-v33-dodge/build_dodge.py)和 [v34 发行构建脚本](source/history/story-coop-v34-release/build_release.py)。v35 至 v37 目录包含后续英文布局、键位入口和打包修改。
-3. [v0.10.3 发行版补丁目录](source/release-v0.10.3-mod/patch/)包含实际发布的英文安装器、补丁配方和界面数据。安装器基于校验过的原版程序重建 EXE；仓库不包含完整游戏程序，也不包含复现每个发行包所需的全部历史输入。
-4. 运行诊断和测试脚本前请先阅读：部分脚本会连接或修改运行中的进程。临时玩法测试辅助与正式 MOD 分开。
+构建脚本会校验 Steam 文件，在内存中重建补丁程序并核对 SHA-256，再将发行目录和 `Shank2-v0.10.3-MOD.zip` 写入 `dist/`，不会修改游戏目录。重复构建时可用 `--out` 指定新的输出目录。无需旧版 ZIP 或额外的 Python 包。
 
-如果只需要安装可用版本，无需自行构建，可按上方步骤使用[发行包](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3)。
+只打包、不核对原版游戏时，可执行 `py -3.12 build.py --package-only`。使用相同的 Python 和 zlib 版本，重复构建的 ZIP 字节一致。已发布的旧 ZIP 使用不同的归档元数据，压缩包哈希因此不同。构建输入和范围见[源码说明](source/README.md)。
 
 ## 说明
 

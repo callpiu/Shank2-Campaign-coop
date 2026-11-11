@@ -2,13 +2,16 @@
 
 This directory contains the development source and release patch data for Shank 2 Campaign Co-op v0.10.3.
 
-- `release-v0.10.3-mod/patch/`: the actual English MOD release's installer and controls PowerShell scripts, executable patch recipe, manifests, and patched UI resources. These files match the published MOD archive.
+- `release-v0.10.3-mod/patch/`: the English MOD's canonical installer, controls scripts, executable patch recipe, install manifest, and patched UI resources.
+- `package-inputs/MOD/`: the public install and uninstall commands and the English package readme. The builder combines these with the manifest-selected patch files and regenerates `patch/SHA256SUMS.txt`.
 - `history/story-coop-prototype/` and `history/story-coop-v02` through `story-coop-v37-simple-packages/`: development builders, native hook and interface work, packaging scripts, and tests, preserved by milestone. Later milestones build on earlier work; this is not one independent project per directory.
 - `story-coop-v27-traits/build_traits.py`, `story-coop-v28-trait-descriptions/build_descriptions.py`, `story-coop-v33-dodge/build_dodge.py`, and `story-coop-v34-release/build_release.py` cover recent gameplay, selection UI, dodge and release work. v35–v37 contain later English layout, control shortcut and package changes.
 
-## Build limitations
+## What the build reproduces
 
-These are historical development scripts, not a self-contained one-command build. Some contain paths specific to the development machine, depend on earlier intermediate archives or local tools, or expect an original game executable and resources. Generated intermediates, original game files, commercial movies and fonts, personal settings, saves, crash dumps and test executables are not included in this source tree. Some historical diagnostic scripts attach to or modify running processes; review them before use. Temporary invincibility and one-hit test helpers are not included in the released MOD.
+[The root build command](../README.md#build-the-english-mod) reconstructs the English MOD executable from the committed patch recipe and a supported Steam copy, then packages the verified runtime inputs. The recipe and UI files are the build inputs; regenerating them from the historical gameplay and UI generators is a separate task. Some of those scripts still depend on old paths, intermediate files and local tools. The Chinese localization and combined packages are outside the new build's scope.
+
+Reference build: Python 3.12.10 with zlib 1.3.1 produced ZIP SHA-256 `2aa635a354a6e633e3b4028fe8647a3e3c6f152551677d3221df240f3cf22ec1`. All members except the regenerated checksum list match the published English ZIP. The build contains no Steam EXE, DLLs, saves, or gameplay test assists.
 
 To install the tested release, use the [release packages](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3), which reconstruct the executable from a supported Steam installation.
 
@@ -18,12 +21,15 @@ To install the tested release, use the [release packages](https://github.com/cal
 
 本目录包含 Shank 2 战役双人 MOD v0.10.3 的开发源码及发行版补丁数据。
 
-- `release-v0.10.3-mod/patch/`：英文 MOD 发行包实际使用的安装器、键位设置脚本、程序补丁配方、清单及界面资源，与发布包一致。
+- `release-v0.10.3-mod/patch/`：英文 MOD 的安装器、键位设置脚本、程序补丁配方、安装清单及界面资源。
+- `package-inputs/MOD/`：安装、卸载入口及英文包说明。构建脚本将其与清单指定的补丁文件一起打包，并重新生成 `patch/SHA256SUMS.txt`。
 - `history/story-coop-prototype/` 和 `history/story-coop-v02` 至 `story-coop-v37-simple-packages/`：按里程碑保存的玩法、原生补丁、界面、打包脚本与测试。后续版本基于早期工作，并非彼此独立的项目。
 - v27 属性、v28 选人说明、v33 闪避和 v34 发行包目录中分别保存了对应构建脚本；v35 至 v37 包含英文布局、键位入口及打包更新。
 
-## 构建限制
+## 构建可复现的范围
 
-这些是历史开发脚本，并非可以直接一键构建的完整工程。部分脚本包含开发机器路径，依赖早期中间包、本地工具或用户自备的原版游戏程序和资源。本源码目录不包含生成的中间产物、原版游戏文件、商业过场视频与字体、个人设置、存档、崩溃转储及测试程序。部分历史诊断脚本会连接或修改运行中的进程，使用前请先阅读。正式 MOD 不包含临时无敌或一击必杀测试辅助。
+[仓库根目录的构建命令](../README.md#构建英文-mod)使用已提交的补丁配方和受支持的 Steam 副本重建英文 MOD 程序，再打包校验过的运行资源。补丁配方和界面文件是本流程的输入；从历史玩法和界面生成器重新生成这些文件是另一项工作，部分旧脚本仍依赖原机器路径、中间产物和本地工具。汉化包和整合包不在这次构建范围内。
+
+参考环境为 Python 3.12.10 和 zlib 1.3.1，输出 ZIP 的 SHA-256 为 `2aa635a354a6e633e3b4028fe8647a3e3c6f152551677d3221df240f3cf22ec1`。除重新生成的校验清单外，包内文件与已经发布的英文 ZIP 一致。包内不含 Steam 原版 EXE、DLL、存档或玩法测试辅助。
 
 需要安装已测试版本时，请使用 [发行包](https://github.com/callpiu/Shank2-Campaign-coop/releases/tag/v0.10.3)，安装器会根据受支持的 Steam 版游戏重建程序。
