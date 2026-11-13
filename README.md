@@ -9,8 +9,8 @@ Download one package from the [unified latest release](https://github.com/callpi
 | Package | Contents |
 | --- | --- |
 | `Shank2-v0.10.4-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
-| `Shank2-v0.10.3-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod |
-| `Shank2-v0.10.5-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization; includes the checkpoint retry fix |
+| `Shank2-v0.10.6-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod; fixes clipped Rebel Intel descriptions |
+| `Shank2-v0.10.6-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization; includes the checkpoint retry and Rebel Intel text fixes |
 
 ## Features
 
@@ -70,8 +70,8 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 | 文件 | 内容 |
 | --- | --- |
 | `Shank2-v0.10.4-MOD.zip` | 原版战役双人 MOD，不含汉化 |
-| `Shank2-v0.10.3-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD |
-| `Shank2-v0.10.5-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包，已修复汉化下的检查点重试 |
+| `Shank2-v0.10.6-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD，已修复叛军情报正文截断 |
+| `Shank2-v0.10.6-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包，已修复汉化下的检查点重试及叛军情报正文截断 |
 
 ## 功能
 
