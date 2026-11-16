@@ -1,0 +1,6 @@
+{
+  "version": "0.10.7",
+  "base_release": "0.10.4",
+  "online_campaign": false,
+  "scope": "Local campaign: selectable health bar layout and keyboard/mouse plus controller"
+}

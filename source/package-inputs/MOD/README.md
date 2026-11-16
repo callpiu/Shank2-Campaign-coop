@@ -1,4 +1,4 @@
-# Shank 2 Campaign Co-op MOD v0.10.4
+# Shank 2 Campaign Co-op MOD v0.10.7
 
 This package has two shortcuts:
 
@@ -67,3 +67,9 @@ and biographies without overlap in this English update. All 17 English layouts
 passed static checks; full-campaign coverage remains incomplete.
 
 Controls shortcut fix: Coop-Key-Settings.cmd directly launches its installed settings script; no legacy Open-Window helper is required.
+
+## Co-op controls and health bars
+
+Open `Coop-Key-Settings.cmd` in the installed game folder. Select **1P keyboard / mouse + 2P controller** to use the keyboard and mouse for player 1 and the first connected XInput controller for player 2. Choose **Restore defaults** in that mode to set left click to light attack and right click to ranged attack / interact; you can also rebind them individually. Shared keyboard and two controllers are still supported.
+
+Choose **Side by side** (the default) or **Stacked** under **HUD layout**. In Side by side, player 2's status sits just to the right of player 1, leaving room for the boss bar. Save and restart the game to apply changes.

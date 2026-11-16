@@ -1,6 +1,6 @@
 # Shank 2 Campaign Co-op
 
-Play the campaign locally with two players on the same screen. The mod adds a **Local Co-op** entry under Campaign Mode while retaining the single-player and Survival menus. It supports two XInput controllers or a shared keyboard.
+Play the campaign locally with two players on the same screen. The mod adds a **Local Co-op** entry under Campaign Mode while retaining the single-player and Survival menus. It supports two XInput controllers, a shared keyboard, or keyboard and mouse for 1P with a controller for 2P.
 
 ## Downloads
 
@@ -8,9 +8,9 @@ Download one package from the [unified latest release](https://github.com/callpi
 
 | Package | Contents |
 | --- | --- |
-| `Shank2-v0.10.4-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
+| `Shank2-v0.10.7-MOD.zip` | Campaign co-op MOD for the original game, without Chinese localization |
 | `Shank2-v0.10.6-CHS.zip` | Simplified Chinese localization and optimized cutscenes, without the co-op mod; fixes clipped Rebel Intel descriptions |
-| `Shank2-v0.10.6-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization; includes the checkpoint retry and Rebel Intel text fixes |
+| `Shank2-v0.10.7-MOD-CHS.zip` | Co-op mod and optimized Simplified Chinese localization; includes the checkpoint retry and Rebel Intel text fixes |
 
 ## Features
 
@@ -33,6 +33,8 @@ To switch package types, uninstall the installed package first. Keep the `.shank
 
 ## Controls
 
+Under **Input mode**, select **1P keyboard / mouse + 2P controller** to use mixed inputs. Select **Restore defaults** in that mode to map left click to light attack and right click to ranged attack / interact. In **HUD layout**, choose **Side by side** (default) or **Stacked**.
+
 Run `Coop-Key-Settings.cmd` in the game folder to change bindings; restart the game to apply changes. The default shared-keyboard layout uses WASD / arrow keys to move, Space / Numpad 0 to jump, J / Numpad 1 for light attack, K / Numpad 2 for heavy weapon, L / Numpad 3 for ranged attack, O / Numpad 6 for grapple, and Z / C or Numpad 8 / 9 to dodge left / right. Enable NumLock for player 2. Enter pauses or resumes.
 
 ## Source code
@@ -47,7 +49,7 @@ From the repository root, run this with Python 3.12 and a supported, unmodified 
 py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
 ```
 
-The build verifies the Steam files, reconstructs the patched executable in memory and checks its SHA-256. It writes the release directory and `Shank2-v0.10.4-MOD.zip` to `dist/`, without changing the game directory. Use `--out` to choose a new output directory for subsequent builds. No previous release ZIP or extra Python packages are required.
+The build verifies the Steam files, reconstructs the patched executable in memory and checks its SHA-256. It writes the release directory and `Shank2-v0.10.7-MOD.zip` to `dist/`, without changing the game directory. Use `--out` to choose a new output directory for subsequent builds. No previous release ZIP or extra Python packages are required.
 
 To package the committed inputs without verifying a game copy, run `py -3.12 build.py --package-only`. With the same Python and zlib versions, repeat builds produce identical ZIP bytes. See [source/README.md](source/README.md) for the build inputs and scope.
 
@@ -61,7 +63,7 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 # Shank 2 战役双人合作 MOD
 
-在同一屏幕上双人游玩战役。MOD 在战役菜单中增加「本地双人」入口，保留单人战役和生存模式，支持两个 XInput 手柄或共用键盘。
+在同一屏幕上双人游玩战役。MOD 在战役菜单中增加「本地双人」入口，保留单人战役和生存模式，支持两个 XInput 手柄、共用键盘，或 1P 键鼠＋2P 手柄。
 
 ## 下载
 
@@ -69,9 +71,9 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 | 文件 | 内容 |
 | --- | --- |
-| `Shank2-v0.10.4-MOD.zip` | 原版战役双人 MOD，不含汉化 |
+| `Shank2-v0.10.7-MOD.zip` | 原版战役双人 MOD，不含汉化 |
 | `Shank2-v0.10.6-CHS.zip` | 优化后的简体中文汉化及过场，不含双人 MOD，已修复叛军情报正文截断 |
-| `Shank2-v0.10.6-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包，已修复汉化下的检查点重试及叛军情报正文截断 |
+| `Shank2-v0.10.7-MOD-CHS.zip` | 双人 MOD 与优化汉化整合包，已修复汉化下的检查点重试及叛军情报正文截断 |
 
 ## 功能
 
@@ -94,6 +96,8 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 
 ## 按键
 
+在设置工具中可选「1P 键鼠 + 2P 手柄」。该模式下「恢复默认」会将鼠标左键设为轻攻击、右键设为远程攻击／互动。「血条布局」支持默认左右并排和上下排列。
+
 运行游戏目录中的 `Coop-Key-Settings.cmd` 可修改键位，重启游戏后生效。默认共用键盘：1P 使用 WASD 移动，2P 使用方向键；跳跃分别为空格和小键盘 0，轻攻击为 J 和小键盘 1，重武器为 K 和小键盘 2，远程攻击为 L 和小键盘 3，抓取为 O 和小键盘 6，左右闪避为 Z／C 和小键盘 8／9。2P 请开启 NumLock。回车暂停或恢复。
 
 ## 源码
@@ -108,7 +112,7 @@ The Chinese localization and cutscene subtitles are based on the 3DM patches sup
 py -3.12 build.py --game-dir 'C:\SteamLibrary\steamapps\common\Shank 2'
 ```
 
-构建脚本会校验 Steam 文件，在内存中重建补丁程序并核对 SHA-256，再将发行目录和 `Shank2-v0.10.4-MOD.zip` 写入 `dist/`，不会修改游戏目录。重复构建时可用 `--out` 指定新的输出目录。无需旧版 ZIP 或额外的 Python 包。
+构建脚本会校验 Steam 文件，在内存中重建补丁程序并核对 SHA-256，再将发行目录和 `Shank2-v0.10.7-MOD.zip` 写入 `dist/`，不会修改游戏目录。重复构建时可用 `--out` 指定新的输出目录。无需旧版 ZIP 或额外的 Python 包。
 
 只打包、不核对原版游戏时，可执行 `py -3.12 build.py --package-only`。使用相同的 Python 和 zlib 版本，重复构建的 ZIP 字节一致。构建输入和范围见[源码说明](source/README.md)。
 
